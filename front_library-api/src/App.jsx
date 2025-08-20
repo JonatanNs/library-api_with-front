@@ -1,4 +1,7 @@
 import './App.css'
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import "./App.css";
+import { HomePage } from './pages/HomePage';
 
 function App() {
   
@@ -8,7 +11,7 @@ function App() {
       errorElement : <p>Erreur de chargement...</p>,
       children: [
         // Afficher les produits sur la page d'accueil
-        { path: "", element: <h1>Accueil</h1> }
+        { path: "", element:<HomePage/> }
       ],
     },
   ]);
@@ -16,7 +19,7 @@ function App() {
   function Root(){
     return(
       <>
-        <NavBar/>
+        {/* <NavBar/> */}
         <Outlet/>
       </>
     )
