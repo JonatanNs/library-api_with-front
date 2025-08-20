@@ -5,7 +5,7 @@ export const useAuthors = () => {
   const url = "http://localhost:8080/api/author";
 
   const [allAuthors, setAuthors] = useState([]);
-  const [authorById, setAuthor] = useState([]);
+  const [authorById, setAuthor] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
